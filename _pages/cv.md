@@ -9,9 +9,6 @@ redirect_from:
 
 {% include base_path %}
 
-
-## Downloadable PDF
-
 You can view or download the PDF version of my CV below:
 
 <iframe src="/files/cv_general.pdf" width="100%" height="800px" style="border:none;">
