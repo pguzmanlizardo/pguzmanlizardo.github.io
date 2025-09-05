@@ -14,21 +14,21 @@
 
 .photo-album figure {
     flex: 0 0 auto;
-    width: 260px;
+    width: 520px;
     margin: 0;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* Remove justify-content so images align at bottom, not captions */
     height: 100%;
 }
 
 .photo-album img {
-    width: 240px;
+    width: 480px;
     height: auto;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border: 3px solid #000;
     display: block;
     margin-bottom: 0.5rem;
     align-self: flex-end;

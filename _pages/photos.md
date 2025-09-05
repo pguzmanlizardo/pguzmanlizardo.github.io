@@ -18,7 +18,7 @@ author_profile: true
 <div class="photo-album photo-album-bottom" id="sierra-leone-2022">
   <figure>
     <img src="/images/photos/sierra_leone_2022/fist_time_ipa_office.jpg" alt="First time at IPA office" />
-    <figcaption>First time at Sierra Leone IPA office.</figcaption>
+    <figcaption>First time at Sierra Leone IPA office</figcaption>
   </figure>
   <figure>
     <img src="/images/photos/sierra_leone_2022/ipa_office_celebration.jpg" alt="IPA office celebration" />
@@ -38,7 +38,7 @@ author_profile: true
 <div class="photo-album photo-album-bottom" id="kenema-2024">
   <figure>
     <img src="/images/photos/kenema_2024/traditional_courts.jpeg" alt="First time at IPA office" />
-    <figcaption>Traditiona Tax Courts in Kenema.</figcaption>
+    <figcaption>Traditiona Tax Courts in Kenema</figcaption>
   </figure>
 </div>
 
