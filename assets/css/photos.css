@@ -4,6 +4,11 @@
     overflow-x: auto;
     gap: 2rem;
     padding: 2rem 0 1rem 0;
+    align-items: flex-end;
+}
+
+.photo-album-bottom {
+    align-items: flex-end;
 }
 
 .photo-album figure {
@@ -11,6 +16,10 @@
     width: 220px;
     margin: 0;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
 }
 
 .photo-album img {
@@ -22,8 +31,16 @@
 
 .photo-album figcaption {
     margin-top: 0.5rem;
-    font-size: 0.95em;
-    color: #555;
+    font-size: 1em;
+    color: inherit;
+    font-family: inherit;
+    text-align: center;
+}
+
+@media (prefers-color-scheme: dark) {
+    .photo-album figcaption {
+        color: #fff;
+    }
 }
 
 .photo-album-title {
