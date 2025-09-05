@@ -1,6 +1,8 @@
+---
 layout: page
 title: "Photos"
 permalink: /photos/
+---
 
 
 <!-- Link to custom photo album CSS -->
