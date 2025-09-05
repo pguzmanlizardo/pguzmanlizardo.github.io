@@ -22,9 +22,9 @@ repository               : "pguzmanlizardo/pguzmanlizardo.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "profile.jpg"
   name             : "Pablo M. Guzmán Lizardo"
-  pronouns         : "he/him"  
+  pronouns         : # "he/him"  
   bio              : "PhD Candidate in Political Economics"
   location         : # 
   employer         : "Stanford GSB"
@@ -70,7 +70,7 @@ author:
   steam            : # Username
   telegram         : # URL
   tumblr           : # Username
-  twitter          : p_guzmanlizardo
+  twitter          : # p_guzmanlizardo
   vine             : # Username
   weibo            : # Username
   wikipedia        : # Username
