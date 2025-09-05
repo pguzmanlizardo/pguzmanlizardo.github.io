@@ -1,0 +1,32 @@
+.photo-album {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 2rem;
+    padding: 2rem 0 1rem 0;
+}
+
+.photo-album figure {
+    flex: 0 0 auto;
+    width: 220px;
+    margin: 0;
+    text-align: center;
+}
+
+.photo-album img {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.photo-album figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.95em;
+    color: #555;
+}
+
+.photo-album-title {
+    margin-top: 2.5rem;
+    margin-bottom: 1.2rem;
+}
