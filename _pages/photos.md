@@ -38,7 +38,7 @@ author_profile: true
 <div class="photo-album photo-album-bottom" id="kenema-2024">
   <figure>
     <img src="/images/photos/kenema_2024/traditional_courts.jpeg" alt="First time at IPA office" />
-    <figcaption>Traditiona Tax Courts in Kenema</figcaption>
+    <figcaption>Traditional Tax Courts in Kenema</figcaption>
   </figure>
 </div>
 
