@@ -18,15 +18,12 @@ author_profile: true
 <div class="photo-album photo-album-bottom" id="sierra-leone-2022">
   <figure>
     <img src="/images/photos/sierra_leone_2022/fist_time_ipa_office.jpg" alt="First time at IPA office" />
-    <figcaption>First time at Sierra Leone IPA office</figcaption>
   </figure>
   <figure>
     <img src="/images/photos/sierra_leone_2022/ipa_office_celebration.jpg" alt="IPA office celebration" />
-    <figcaption>With the Sierra Leone IPA team</figcaption>
   </figure>
   <figure>
     <img src="/images/photos/sierra_leone_2022/national_museum_salone.jpg" alt="National Museum Salone" />
-    <figcaption>At the Sierra Leone National Museum</figcaption>
   </figure>
 </div>
 
@@ -37,8 +34,44 @@ author_profile: true
 
 <div class="photo-album photo-album-bottom" id="kenema-2024">
   <figure>
-    <img src="/images/photos/kenema_2024/traditional_courts.jpeg" alt="First time at IPA office" />
-    <figcaption>Traditional Tax Courts in Kenema</figcaption>
+    <img src="/images/photos/kenema_2024/car_with_bags.jpeg" alt="Car with bags" />
+    <figcaption>Picture by Tom-Henry Taubhorn</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/photos/kenema_2024/kenema_office.jpeg" alt="Kenema office" />
+    <figcaption>Picture by Tom-Henry Taubhorn</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/photos/kenema_2024/kenema_plaza.jpeg" alt="Kenema plaza" />
+    <figcaption>Picture by Tom-Henry Taubhorn</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/photos/kenema_2024/mr_alimamy_with_seller.jpeg" alt="Mr. Alimamy with seller" />
+    <figcaption>Picture by Tom-Henry Taubhorn</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/photos/kenema_2024/oasis_bar.heic" alt="Oasis Bar" />
+    <figcaption>Picture by Tom-Henry Taubhorn</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/photos/kenema_2024/pablo_and_enumerator_meeting.jpeg" alt="Pablo and enumerator meeting" />
+    <figcaption>Picture by Tom-Henry Taubhorn</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/photos/kenema_2024/pablo_musa_tom_henry.jpg" alt="Pablo, Musa, Tom, and Henry" />
+    <figcaption>Picture by Tom-Henry Taubhorn</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/photos/kenema_2024/pablo_reverend.jpeg" alt="Pablo and Reverend" />
+    <figcaption>Picture by Tom-Henry Taubhorn</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/photos/kenema_2024/religious_workshops.jpeg" alt="Religious workshops" />
+    <figcaption>Picture by Tom-Henry Taubhorn</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/photos/kenema_2024/traditional_courts.jpeg" alt="Traditional courts" />
+    <figcaption>Picture by Tom-Henry Taubhorn</figcaption>
   </figure>
 </div>
 
