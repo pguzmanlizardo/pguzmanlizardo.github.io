@@ -34,11 +34,19 @@ author_profile: true
 
 <div class="photo-album photo-album-bottom" id="kenema-2024">
   <figure>
-    <img src="/images/photos/kenema_2024/car_with_bags.jpeg" alt="Car with bags" />
+    <img src="/images/photos/kenema_2024/pablo_reverend.jpeg" alt="Pablo and Reverend" />
     <figcaption>Picture by Tom-Henry Taubhorn</figcaption>
   </figure>
   <figure>
-    <img src="/images/photos/kenema_2024/kenema_office.jpeg" alt="Kenema office" />
+    <img src="/images/photos/kenema_2024/religious_workshops.jpeg" alt="Religious workshops" />
+    <figcaption>Picture by Tom-Henry Taubhorn</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/photos/kenema_2024/traditional_courts.jpeg" alt="Traditional courts" />
+    <figcaption>Picture by Tom-Henry Taubhorn</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/photos/kenema_2024/car_with_bags.jpeg" alt="Car with bags" />
     <figcaption>Picture by Tom-Henry Taubhorn</figcaption>
   </figure>
   <figure>
@@ -50,27 +58,11 @@ author_profile: true
     <figcaption>Picture by Tom-Henry Taubhorn</figcaption>
   </figure>
   <figure>
-    <img src="/images/photos/kenema_2024/oasis_bar.heic" alt="Oasis Bar" />
-    <figcaption>Picture by Tom-Henry Taubhorn</figcaption>
-  </figure>
-  <figure>
     <img src="/images/photos/kenema_2024/pablo_and_enumerator_meeting.jpeg" alt="Pablo and enumerator meeting" />
     <figcaption>Picture by Tom-Henry Taubhorn</figcaption>
   </figure>
   <figure>
     <img src="/images/photos/kenema_2024/pablo_musa_tom_henry.jpg" alt="Pablo, Musa, Tom, and Henry" />
-    <figcaption>Picture by Tom-Henry Taubhorn</figcaption>
-  </figure>
-  <figure>
-    <img src="/images/photos/kenema_2024/pablo_reverend.jpeg" alt="Pablo and Reverend" />
-    <figcaption>Picture by Tom-Henry Taubhorn</figcaption>
-  </figure>
-  <figure>
-    <img src="/images/photos/kenema_2024/religious_workshops.jpeg" alt="Religious workshops" />
-    <figcaption>Picture by Tom-Henry Taubhorn</figcaption>
-  </figure>
-  <figure>
-    <img src="/images/photos/kenema_2024/traditional_courts.jpeg" alt="Traditional courts" />
     <figcaption>Picture by Tom-Henry Taubhorn</figcaption>
   </figure>
 </div>
