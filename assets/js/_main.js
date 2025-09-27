@@ -5,8 +5,8 @@
 // Determine the expected state of the theme toggle, which can be "dark", "light", or
 // "system". Default is "system".
 let determineThemeSetting = () => {
-  let themeSetting = localStorage.getItem("theme");
-  return (themeSetting != "dark" && themeSetting != "light" && themeSetting != "system") ? "system" : themeSetting;
+  // Force site to use light theme only
+  return "light";
 };
 
 // Determine the computed theme, which can be "dark" or "light". If the theme setting is
@@ -20,7 +20,8 @@ let determineComputedTheme = () => {
 };
 
 // detect OS/browser preference
-const browserPref = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+// Ignore OS/browser preference; we always use light
+const browserPref = 'light';
 
 // Set the theme on page load or when explicitly called
 let setTheme = (theme) => {
@@ -31,8 +32,9 @@ let setTheme = (theme) => {
     browserPref;
 
   if (use_theme === "dark") {
-    $("html").attr("data-theme", "dark");
-    $("#theme-icon").removeClass("fa-sun").addClass("fa-moon");
+    // If something tries to set dark, override to light
+    $("html").removeAttr("data-theme");
+    $("#theme-icon").removeClass("fa-moon").addClass("fa-sun");
   } else if (use_theme === "light") {
     $("html").removeAttr("data-theme");
     $("#theme-icon").removeClass("fa-moon").addClass("fa-sun");
@@ -41,10 +43,9 @@ let setTheme = (theme) => {
 
 // Toggle the theme manually
 var toggleTheme = () => {
-  const current_theme = $("html").attr("data-theme");
-  const new_theme = current_theme === "dark" ? "light" : "dark";
-  localStorage.setItem("theme", new_theme);
-  setTheme(new_theme);
+  // Disable theme toggling; always stay light
+  localStorage.setItem("theme", "light");
+  setTheme("light");
 };
 
 /* ==========================================================================
@@ -92,12 +93,7 @@ $(document).ready(function () {
 
   // If the user hasn't chosen a theme, follow the OS preference
   setTheme();
-  window.matchMedia('(prefers-color-scheme: dark)')
-        .addEventListener("change", (e) => {
-          if (!localStorage.getItem("theme")) {
-            setTheme(e.matches ? "dark" : "light");
-          }
-        });
+  // Do not react to OS theme changes
 
   // Enable the theme toggle
   $('#theme-toggle').on('click', toggleTheme);
@@ -113,7 +109,8 @@ $(document).ready(function () {
     if (didResize) {
       didResize = false;
       bumpIt();
-    }}, 250);
+    }
+  }, 250);
   var didResize = false;
   bumpIt();
 
