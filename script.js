@@ -105,14 +105,19 @@ document.addEventListener('DOMContentLoaded', () => {
 // ==========================================
 
 document.addEventListener('DOMContentLoaded', () => {
-    const imageViewer = document.querySelector('.abstract-image-viewer');
+    const imageViewers = document.querySelectorAll('.abstract-image-viewer');
 
-    if (imageViewer) {
+    imageViewers.forEach(imageViewer => {
         const images = imageViewer.querySelectorAll('.abstract-image');
         const prevBtn = imageViewer.querySelector('.prev-btn');
         const nextBtn = imageViewer.querySelector('.next-btn');
         const indicators = imageViewer.querySelectorAll('.indicator');
         const caption = imageViewer.querySelector('.image-caption');
+
+        if (!images.length || !prevBtn || !nextBtn) {
+            return;
+        }
+
         let currentIndex = 0;
 
         function showImage(index) {
@@ -122,7 +127,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Add active class to current image and indicator
             images[index].classList.add('active');
-            indicators[index].classList.add('active');
+            if (indicators[index]) {
+                indicators[index].classList.add('active');
+            }
             currentIndex = index;
 
             // Update caption based on current language
@@ -133,6 +140,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
         }
+
+        // Initialize each viewer from the first image
+        showImage(0);
 
         // Previous button
         prevBtn.addEventListener('click', () => {
@@ -152,7 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 showImage(index);
             });
         });
-    }
+    });
 });
 
 // ==========================================

@@ -22,8 +22,8 @@
     --shadow-hover: 0 4px 16px rgba(0, 0, 0, 0.15);
 
     /* Typography */
-    --font-primary: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    --font-heading: 'Georgia', serif;
+    --font-primary: "din-2014", sans-serif;
+    --font-heading: "din-2014", sans-serif;
 
     /* Spacing */
     --spacing-xs: 0.5rem;
