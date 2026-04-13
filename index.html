@@ -44,10 +44,45 @@
         <div class="container">
             <div class="home-hero">
                 <!-- Portrait Image -->
-                <div class="portrait-container" id="portraitContainer">
-                    <div class="portrait-flipper" id="portraitFlipper">
-                        <img src="assets/portrait_front.jpeg" alt="Pablo Guzmán Lizardo" class="portrait-image front">
-                        <img src="assets/portrait_back.jpg " alt="Pablo Guzmán Lizardo" class="portrait-image back">
+                <div class="home-side">
+                    <div class="portrait-container" id="portraitContainer">
+                        <div class="portrait-flipper" id="portraitFlipper">
+                            <img src="assets/portrait_front.jpeg" alt="Pablo Guzmán Lizardo" class="portrait-image front">
+                            <img src="assets/portrait_back.jpg " alt="Pablo Guzmán Lizardo" class="portrait-image back">
+                        </div>
+                    </div>
+
+                    <div class="contact-compact" id="contactCompact">
+                        <div class="contact-compact-header">
+                            <div class="contact-compact-intro">
+                                <h3 class="translatable" data-lang-en="Contact" data-lang-es="Contacto">Contact</h3>
+                                <p class="contact-mini-line">
+                                    <span class="translatable" data-lang-en="Email:" data-lang-es="Correo:">Email:</span>
+                                    <a href="mailto:pablo@guzmanlizardo.com">pablo@guzmanlizardo.com</a>
+                                </p>
+                            </div>
+                            <button type="button" class="contact-toggle-btn" id="contactToggle" aria-expanded="false"
+                                data-lang-en-show="Show details" data-lang-en-hide="Hide details"
+                                data-lang-es-show="Ver detalles" data-lang-es-hide="Ocultar detalles">
+                                Show details
+                            </button>
+                        </div>
+
+                        <div class="contact-panel" id="contactPanel" aria-hidden="true">
+                            <div class="contact-item">
+                                <strong class="translatable" data-lang-en="Institution:" data-lang-es="Institución:">Institution:</strong>
+                                <span>Stanford Graduate School of Business</span>
+                            </div>
+                            <div class="contact-item">
+                                <strong class="translatable" data-lang-en="Location:" data-lang-es="Ubicación:">Location:</strong>
+                                <span>655 Knight Way, Stanford, California, 94305, USA</span>
+                            </div>
+                            <div class="contact-item">
+                                <strong class="translatable" data-lang-en="Stanford profile:" data-lang-es="Perfil universitario:">Stanford profile:</strong>
+                                <a href="https://www.gsb.stanford.edu/programs/phd/academic-experience/students/pablo-moises-guzman-lizardo"
+                                    target="_blank">Stanford</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -71,7 +106,6 @@
                     </p>
 
                     <div class="about-section">
-                        <h2 class="translatable" data-lang-en="About Me" data-lang-es="Sobre Mí">About Me</h2>
                         <p class="translatable" data-lang-en="My primary agenda focuses on how local governments in low-income setting can successfully
                             invest in their fiscal capacity and their ability to provide public services. Most of my
                             current work in based in Sierra Leone, currently undergoing a country-wide property tax
@@ -103,38 +137,6 @@
             </div>
         </div>
 
-        <!-- Contact Information -->
-        <div class="contact-info">
-            <h2 class="translatable" data-lang-en="Contact Information" data-lang-es="Información de Contacto">
-                Contact Information</h2>
-            <div class="contact-grid">
-                <div class="contact-item">
-                    <strong class="translatable" data-lang-en="Email:" data-lang-es="Correo:">Email:</strong>
-                    <a href="mailto:pablo@guzmanlizardo.com">pablo@guzmanlizardo.com</a>
-                </div>
-                <div class="contact-item">
-                    <strong class="translatable" data-lang-en="Institution:"
-                        data-lang-es="Institución:">Institution:</strong>
-                    <span>Stanford Graduate School of Business</span>
-                </div>
-                <div class="contact-item">
-                    <strong class="translatable" data-lang-en="Location:" data-lang-es="Ubicación:">Location:</strong>
-                    <span>655 Knight Way, Stanford, <br> California, 94305, USA</span>
-                </div>
-                <!-- Add more contact methods as needed -->
-                <div class="contact-item">
-                    <strong class="translatable" data-lang-en="Stanford profile"
-                        data-lang-es="Perfil universitario">Location:</strong>
-                    <a href="https://www.gsb.stanford.edu/programs/phd/academic-experience/students/pablo-moises-guzman-lizardo"
-                        target="_blank">Stanford</a>
-                </div>
-                <div class="contact-item hidden">
-                    <strong>Twitter:</strong>
-                    <a href="https://twitter.com/yourhandle" target="_blank">@yourhandle</a>
-                </div>
-            </div>
-        </div>
-        </div>
     </section>
 
     <!-- Research Section -->

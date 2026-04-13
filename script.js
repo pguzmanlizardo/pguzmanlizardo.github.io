@@ -46,6 +46,8 @@ function setLanguage(lang) {
             }
         }
     });
+
+    syncContactToggleLabel();
 }
 
 // Function to update active language button
@@ -57,6 +59,26 @@ function updateLanguageButtons() {
             btn.classList.remove('active');
         }
     });
+}
+
+function updateContactToggleLabel(toggleButton, isOpen) {
+    const stateKey = isOpen ? 'hide' : 'show';
+    const label = toggleButton.getAttribute(`data-lang-${currentLang}-${stateKey}`) ||
+        toggleButton.getAttribute('data-lang-en-show') ||
+        'Show details';
+    toggleButton.textContent = label;
+}
+
+function syncContactToggleLabel() {
+    const contactCompact = document.getElementById('contactCompact');
+    const contactToggle = document.getElementById('contactToggle');
+
+    if (!contactCompact || !contactToggle) {
+        return;
+    }
+
+    const isOpen = contactCompact.classList.contains('is-open');
+    updateContactToggleLabel(contactToggle, isOpen);
 }
 
 // ==========================================
@@ -97,6 +119,29 @@ document.addEventListener('DOMContentLoaded', () => {
                 button.textContent = isCollapsed ? showText : hideText;
             }
         });
+    });
+});
+
+// ==========================================
+// CONTACT TOGGLE FUNCTIONALITY
+// ==========================================
+
+document.addEventListener('DOMContentLoaded', () => {
+    const contactCompact = document.getElementById('contactCompact');
+    const contactToggle = document.getElementById('contactToggle');
+    const contactPanel = document.getElementById('contactPanel');
+
+    if (!contactCompact || !contactToggle || !contactPanel) {
+        return;
+    }
+
+    updateContactToggleLabel(contactToggle, false);
+
+    contactToggle.addEventListener('click', () => {
+        const isOpen = contactCompact.classList.toggle('is-open');
+        contactToggle.setAttribute('aria-expanded', String(isOpen));
+        contactPanel.setAttribute('aria-hidden', String(!isOpen));
+        updateContactToggleLabel(contactToggle, isOpen);
     });
 });
 
