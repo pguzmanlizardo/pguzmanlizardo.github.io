@@ -435,10 +435,11 @@
     <h3 id="historial-de-series-tabla-ordenable">Historial de series
     (tabla ordenable)</h3>
     <p>Cada fila es una serie individual (no solo el top set). Haz clic
-    en cualquier encabezado para ordenar por esa columna, y usa el
-    filtro para buscar por ejercicio. Esta tabla se genera a partir de
-    <code>progreso.csv</code>, el archivo donde se registra cada
-    sesión.</p>
+    en un encabezado para ordenar por esa columna; Shift+clic para
+    ordenar por varias columnas a la vez (la primera manda, las
+    siguientes desempatan). Usa el filtro para buscar por ejercicio.
+    Esta tabla se genera a partir de <code>progreso.csv</code>, el
+    archivo donde se registra cada sesión.</p>
     <div id="progreso-table">
   <input
     type="text"
@@ -1282,11 +1283,21 @@
   const cuerpoEl = document.getElementById('progreso-table-cuerpo');
   const filtroEl = document.getElementById('progreso-table-filtro');
 
-  // Estado de orden actual: qué columna y en qué dirección. Arranca
-  // ordenado por fecha descendente, igual que el orden en que Python
-  // preparó FILAS_ORIGINALES.
-  let ordenColumna = 'fecha';
-  let ordenAscendente = false;
+  // Estado de orden actual: una LISTA de columnas con su dirección, en
+  // orden de prioridad (la primera es el criterio principal, la segunda
+  // desempata a la primera, etc.) — esto es lo que permite ordenar por
+  // varias columnas a la vez. Arranca ordenado solo por fecha
+  // descendente, igual que el orden en que Python preparó
+  // FILAS_ORIGINALES.
+  //
+  // Interacción (como una hoja de cálculo):
+  //   - Clic normal en un encabezado: ese pasa a ser el ÚNICO criterio de
+  //     orden (se descartan los demás). Si ya era el único criterio,
+  //     alterna ascendente/descendente.
+  //   - Shift+clic: AGREGA esa columna a la lista de criterios sin borrar
+  //     los anteriores (o, si ya estaba en la lista, alterna su
+  //     dirección manteniendo su posición/prioridad).
+  let ordenColumnas = [{ key: 'fecha', asc: false }];
 
   function formatearCelda(valor) {
     // null/undefined (ej. peso_lbs o rir sin dato) se muestran como
@@ -1298,6 +1309,8 @@
     return valor;
   }
 
+  // Compara dos filas por UNA sola columna (sin dirección todavía — eso
+  // se aplica afuera, en compararFilasMultiple).
   function compararFilas(a, b, columna) {
     const def = COLUMNAS.find(function (c) { return c.key === columna; });
     let va = a[columna];
@@ -1315,16 +1328,27 @@
     return String(va).localeCompare(String(vb));
   }
 
+  // Compara dos filas recorriendo TODA la lista de criterios en
+  // ordenColumnas, en orden de prioridad: si el primer criterio empata
+  // (cmp === 0), se usa el segundo para desempatar, y así sucesivamente.
+  // Esto es lo que hace posible ordenar por varias columnas a la vez.
+  function compararFilasMultiple(a, b) {
+    for (const criterio of ordenColumnas) {
+      const cmp = compararFilas(a, b, criterio.key);
+      if (cmp !== 0) {
+        return criterio.asc ? cmp : -cmp;
+      }
+    }
+    return 0;
+  }
+
   function render() {
     const filtro = filtroEl.value.trim().toLowerCase();
     let filas = FILAS_ORIGINALES.filter(function (f) {
       return !filtro || f.ejercicio.toLowerCase().includes(filtro);
     });
 
-    filas = filas.slice().sort(function (a, b) {
-      const cmp = compararFilas(a, b, ordenColumna);
-      return ordenAscendente ? cmp : -cmp;
-    });
+    filas = filas.slice().sort(compararFilasMultiple);
 
     cuerpoEl.innerHTML = '';
     filas.forEach(function (fila) {
@@ -1340,8 +1364,31 @@
     });
   }
 
-  // Encabezados: uno por columna, clicable para ordenar. Un pequeño
-  // triángulo (▲/▼) indica la columna y dirección de orden actual.
+  // Actualiza el texto de TODOS los encabezados según ordenColumnas: cada
+  // columna activa muestra su flecha (▲/▼) y, si hay más de un criterio
+  // a la vez, un numerito con su prioridad (1 = principal, 2 = desempate,
+  // etc.) para que quede claro en qué orden se están aplicando.
+  function actualizarEncabezados() {
+    Array.prototype.forEach.call(encabezadosEl.children, function (th) {
+      const col = COLUMNAS.find(function (c) { return c.key === th.dataset.key; });
+      const posicion = ordenColumnas.findIndex(function (o) { return o.key === col.key; });
+      let indicador = '';
+      if (posicion !== -1) {
+        const criterio = ordenColumnas[posicion];
+        const flecha = criterio.asc ? '▲' : '▼';
+        // El numerito de prioridad solo se muestra si hay más de una
+        // columna en juego — con una sola columna, la flecha ya basta.
+        const numero = ordenColumnas.length > 1 ? String(posicion + 1) : '';
+        indicador = ' ' + flecha + numero;
+      }
+      th.textContent = col.label + indicador;
+    });
+  }
+
+  // Encabezados: uno por columna, clicable para ordenar. Clic normal =
+  // ordenar solo por esa columna; Shift+clic = agregarla (o alternar su
+  // dirección) sin perder las demás columnas ya elegidas. Ver el
+  // comentario de ordenColumnas más arriba para el detalle completo.
   COLUMNAS.forEach(function (col) {
     const th = document.createElement('th');
     th.style.padding = '0.25rem 0.6rem';
@@ -1349,36 +1396,38 @@
     th.style.textAlign = 'left';
     th.style.cursor = 'pointer';
     th.style.userSelect = 'none';
+    th.title = 'Clic: ordenar por esta columna. Shift+clic: ordenar también por esta columna, además de las ya elegidas.';
     th.dataset.key = col.key;
 
-    function actualizarTexto() {
-      let indicador = '';
-      if (ordenColumna === col.key) {
-        indicador = ordenAscendente ? ' ▲' : ' ▼';
-      }
-      th.textContent = col.label + indicador;
-    }
-    actualizarTexto();
+    th.addEventListener('click', function (evento) {
+      const posicion = ordenColumnas.findIndex(function (o) { return o.key === col.key; });
 
-    th.addEventListener('click', function () {
-      if (ordenColumna === col.key) {
-        ordenAscendente = !ordenAscendente;
+      if (evento.shiftKey) {
+        if (posicion === -1) {
+          // No estaba en la lista: se agrega al final (menor prioridad).
+          ordenColumnas.push({ key: col.key, asc: true });
+        } else {
+          // Ya estaba: solo alterna su dirección, mantiene su posición.
+          ordenColumnas[posicion].asc = !ordenColumnas[posicion].asc;
+        }
       } else {
-        ordenColumna = col.key;
-        ordenAscendente = true;
+        if (ordenColumnas.length === 1 && posicion === 0) {
+          // Era el único criterio: alterna dirección.
+          ordenColumnas[0].asc = !ordenColumnas[0].asc;
+        } else {
+          // Cualquier otro caso: esta columna pasa a ser el único criterio.
+          ordenColumnas = [{ key: col.key, asc: true }];
+        }
       }
-      // Volvemos a poner el indicador en TODOS los encabezados (para
-      // quitarlo de la columna que dejó de ser la activa).
-      Array.prototype.forEach.call(encabezadosEl.children, function (otroTh) {
-        const otraCol = COLUMNAS.find(function (c) { return c.key === otroTh.dataset.key; });
-        const activo = otroTh.dataset.key === ordenColumna;
-        otroTh.textContent = otraCol.label + (activo ? (ordenAscendente ? ' ▲' : ' ▼') : '');
-      });
+
+      actualizarEncabezados();
       render();
     });
 
     encabezadosEl.appendChild(th);
   });
+
+  actualizarEncabezados();
 
   filtroEl.addEventListener('input', render);
 
