@@ -60,387 +60,439 @@
       border-top: 1px solid var(--border-color, #cfdced);
       margin: var(--spacing-xl, 2.5rem) 0;
     }
+    .rutina-gate {
+      max-width: 360px;
+      margin: 4rem auto;
+      padding: var(--spacing-lg, 1.85rem);
+      background: var(--surface-color, #ffffff);
+      border-radius: 8px;
+      box-shadow: var(--shadow, 0 6px 18px rgba(16, 38, 78, 0.08));
+      text-align: center;
+    }
+    .rutina-gate p { margin-bottom: var(--spacing-sm, 0.75rem); }
+    .rutina-gate input {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0.5rem 0.75rem;
+      border: 1px solid var(--border-color, #cfdced);
+      border-radius: 4px;
+      margin-bottom: var(--spacing-sm, 0.75rem);
+      font-family: inherit;
+      font-size: 1rem;
+    }
+    .rutina-gate button {
+      width: 100%;
+      padding: 0.5rem 0.75rem;
+      border: none;
+      border-radius: 4px;
+      background: var(--accent-color, #1e6fff);
+      color: #fff;
+      font-family: inherit;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .rutina-gate .rutina-gate-error {
+      color: #c0392b;
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+      display: none;
+    }
   </style>
 </head>
 <body>
   <div class="rutina-container">
     <a class="rutina-back" href="../">← Volver al inicio</a>
-    <h1 id="rutina-de-gimnasio">Rutina de gimnasio</h1>
-    <p>Estructura tipo "strength athlete": 4 días de fuerza (base +
-    fuerza secundaria/potencia + posterior/atlético) más 1 día de cardio
-    en elíptica. RIR = Reps In Reserve (repeticiones en reserva).</p>
-    <h2 id="día-1--upper-strength">Día 1 — Upper strength</h2>
-    <table>
-    <thead>
-    <tr>
-    <th>#</th>
-    <th>Ejercicio</th>
-    <th>Series x Reps</th>
-    <th>RIR</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-    <td>1</td>
-    <td>Bench press</td>
-    <td>5 x 3-5</td>
-    <td>1-2</td>
-    </tr>
-    <tr>
-    <td>2</td>
-    <td>Weighted pull up (dominada lastrada)</td>
-    <td>4 x 4-6</td>
-    <td>1-2</td>
-    </tr>
-    <tr>
-    <td>3</td>
-    <td>Overhead press</td>
-    <td>3 x 5-7</td>
-    <td>1-2</td>
-    </tr>
-    <tr>
-    <td>4</td>
-    <td>Row (remo)</td>
-    <td>3 x 6-8</td>
-    <td>1-2</td>
-    </tr>
-    <tr>
-    <td>5</td>
-    <td>Rear delt o face pulls</td>
-    <td>3 x 6-8</td>
-    <td>1-2</td>
-    </tr>
-    <tr>
-    <td>6</td>
-    <td>Un tríceps, un bíceps</td>
-    <td>3 x 6-8</td>
-    <td>1-2</td>
-    </tr>
-    </tbody>
-    </table>
-    <blockquote>
-    <p><strong>Progreso (sesión 21 jul) — pesos para la próxima
-    sesión</strong>, según la regla "si llegas a 8 reps, sube peso":</p>
-    <ul>
-    <li><strong>Bench press</strong>: en 140 lbs llegaste a 5 reps
-    (techo del rango 3-5) a RIR 1 → sube ligero, prueba ~145 lbs. El
-    calentamiento de 90 lbs llegó a 8 reps → sube ese escalón a ~95-100
-    lbs. Hombro izquierdo volvió a molestar un poco — seguir vigilando,
-    si empeora bajar volumen de empuje.</li>
-    <li><strong>Weighted pull up</strong>: con banda verde llegaste a 8
-    reps dos veces → siguiente paso ya lo diste en la misma sesión (sin
-    asistencia). Sin asistencia llegaste a 5 y 4 reps a RIR 1, dentro
-    del rango 4-6 → mantener sin asistencia, buscar 6 reps antes de
-    agregar peso extra.</li>
-    <li><strong>Overhead press</strong>: a 80 lbs llegaste a 8 reps a
-    RIR 2 → sube ese primer set a ~85-90 lbs. A 110 lbs fallaste en la
-    rep 4 (RIR 0) y a 100 lbs también llegaste al fallo en la rep 5 →
-    mantener el tope en ~100-105 lbs pero cortar 1-2 reps antes del
-    fallo (RIR 1-2), no subir a 110 todavía.</li>
-    <li><strong>Seated row</strong>: las 3 series (100, 140 y 170 lbs)
-    llegaron a 8 reps → sube las tres ~5-10 lbs (ej. 110, 145-150,
-    175-180), pero en la de 170 dejaste el RIR en 0 — en la próxima
-    corta la serie 1-2 reps antes del fallo.</li>
-    </ul>
-    </blockquote>
-    <h2 id="día-2--lower-strength">Día 2 — Lower strength</h2>
-    <table>
-    <thead>
-    <tr>
-    <th>#</th>
-    <th>Ejercicio</th>
-    <th>Series x Reps</th>
-    <th>RIR</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-    <td>1</td>
-    <td>Smith machine sumo deadlift</td>
-    <td>4 x 3-5</td>
-    <td>1-2</td>
-    </tr>
-    <tr>
-    <td>2</td>
-    <td>V-squat</td>
-    <td>3 x 5-8</td>
-    <td>1-2</td>
-    </tr>
-    <tr>
-    <td>3</td>
-    <td>Split squat o walking lunge</td>
-    <td>3 x 6-8 por pierna</td>
-    <td>1-2</td>
-    </tr>
-    <tr>
-    <td>4</td>
-    <td>Isquios: Nordic (2-4 x 4-6) o hamstring curl (3 x 6-8)</td>
-    <td>—</td>
-    <td>1-2</td>
-    </tr>
-    <tr>
-    <td>5</td>
-    <td>Calf raise 3 x 6-8 (pesado) + tibialis raises 2 x 10-12</td>
-    <td>—</td>
-    <td>1-2</td>
-    </tr>
-    </tbody>
-    </table>
-    <blockquote>
-    <p><strong>Cambio de ejercicio (sesión 23 jul):</strong> el Smith
-    machine deadlift (postura convencional) se sintió poco en las
-    piernas. Se mantiene el mismo Smith machine, pero con postura
-    <strong>sumo</strong> (pies más separados, puntas afuera, torso más
-    vertical) para meter más cuádriceps y aductor sin perder la
-    sensación en espalda baja. Como cambia el patrón, no arranques
-    directo en 180 lbs: recalibra el peso desde algo cómodo y sube según
-    cómo se sienta antes de comparar contra los pesos del deadlift
-    convencional.</p>
-    </blockquote>
-    <p>Cierre: 5 minutos de movilidad (caderas, tobillos).</p>
-    <blockquote>
-    <p>Alternativas si en algún momento quieres variar el estímulo:
-    <strong>Dumbbell Romanian deadlift (DB RDL)</strong> (respeta mejor
-    la bisagra de cadera libre, más énfasis en isquios/glúteo, subir a
-    6-10 reps por el límite de agarre) o <strong>cable
-    pull-through</strong> (tensión constante, bajo riesgo lumbar, mejor
-    como accesorio que como movimiento principal).</p>
-    </blockquote>
-    <blockquote>
-    <p><strong>Progreso (sesión 23 jul) — pesos para la próxima
-    sesión</strong>, según la regla "si llegas a 8 reps, sube peso":</p>
-    <ul>
-    <li><strong>Hack squat (variante de V-squat)</strong>: en 180 lbs
-    llegaste a 5 reps a RIR 1 en ambas series (por debajo del rango 5-8)
-    → mantener 180 lbs y buscar 6-8 reps antes de subir peso.</li>
-    <li><strong>Prone leg curl</strong>: a 100 lbs llegaste a 8 reps con
-    RIR 3 (te sobró mucho) → sube bastante ese primer set, ej. ~115-120
-    lbs. A 140 y 150 lbs llegaste al fallo (RIR 0) en 7 y 4 reps → bajar
-    un poco esas series (ej. ~130-135 lbs) y cortar 1-2 reps antes del
-    fallo.</li>
-    <li><strong>Adductor (superset)</strong>: a 95 lbs llegaste a 10
-    reps con RIR 3 (te sobró mucho) → arranca más alto la próxima vez,
-    ej. ~110-120 lbs. En 140 lbs pasaste de 8 reps (RIR 2) a 6 reps al
-    fallo → mantener ~140-145 lbs en esas series y buscar 8 reps
-    estables antes de subir más.</li>
-    <li><strong>Abductor (superset)</strong>: a 140 lbs llegaste a 10
-    reps con RIR 3 → sube bastante, ej. ~160-170 lbs. A 185 lbs también
-    llegaste a 10 reps (RIR 2) → sube a ~195-200 lbs. A 230 lbs llegaste
-    a 8 reps pero al fallo (RIR 0) → subir solo un poco (ej. ~235-240
-    lbs) y cortar 1-2 reps antes del fallo.</li>
-    </ul>
-    </blockquote>
-    <h2 id="día-3--upper-strength-secundario--power">Día 3 — Upper
-    strength (secundario) + power</h2>
-    <p>Power primer: 3-5 series de 2-3 saltos o lanzamientos de balón
-    medicinal.</p>
-    <table>
-    <thead>
-    <tr>
-    <th>#</th>
-    <th>Ejercicio</th>
-    <th>Series x Reps</th>
-    <th>RIR</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-    <td>1</td>
-    <td>Incline bench o paused bench</td>
-    <td>4 x 5-8</td>
-    <td>1-2</td>
-    </tr>
-    <tr>
-    <td>2</td>
-    <td>Pulldown o pull over</td>
-    <td>3 x 6-8</td>
-    <td>1-2</td>
-    </tr>
-    <tr>
-    <td>3</td>
-    <td>Chest machine o fly</td>
-    <td>3 x 6-8</td>
-    <td>1-2</td>
-    </tr>
-    <tr>
-    <td>4</td>
-    <td>Row variation</td>
-    <td>3 x 6-8</td>
-    <td>1-2</td>
-    </tr>
-    <tr>
-    <td>5</td>
-    <td>Lateral raise</td>
-    <td>3 x 6-8</td>
-    <td>1-2</td>
-    </tr>
-    <tr>
-    <td>6</td>
-    <td>Brazos (opcional)</td>
-    <td>2 x 6-8</td>
-    <td>1-2</td>
-    </tr>
-    </tbody>
-    </table>
-    <blockquote>
-    <p><strong>Progreso (sesión 24 jul) — pesos para la próxima
-    sesión</strong>, según la regla "si llegas a 8 reps, sube peso":</p>
-    <ul>
-    <li><strong>Incline bench</strong>: en 110 lbs llegaste a 7 reps dos
-    veces (RIR 1) pero fallaste en la tercera (RIR 0) → mantener 110 lbs
-    y buscar 8 reps antes de subir.</li>
-    <li><strong>Lateral pulldown</strong>: a 180 lbs llegaste a 8 reps
-    (RIR 2) → sube a ~185-190 lbs. A 190 lbs también llegaste a 8 (RIR
-    1) → sube a ~195-200 lbs. A 200 lbs fallaste en la rep 6 → mantener
-    200 hasta llegar a 8. (La serie de 187.5 lbs no cuenta, se
-    interrumpió por un error de la máquina.)</li>
-    <li><strong>Chest fly machine</strong>: a 90 lbs llegaste a 8 reps
-    con RIR 3 (sobró mucho) → sube bastante, ej. ~105-110 lbs. A 140 lbs
-    también llegaste a 8 (RIR 2) → sube a ~145-150 lbs. A 180 y 160 lbs
-    fallaste (4 y 5 reps) → bajar esas series a ~155-165 lbs y cortar
-    antes del fallo.</li>
-    <li><strong>Low rows</strong>: a 140 lbs llegaste a 8 reps con RIR 1
-    → sube a ~145-150 lbs. A 150 lbs llegaste a 8 pero al fallo (RIR 0),
-    y la siguiente serie a 150 bajó a 7 → mantener ~145-150 lbs y cortar
-    1-2 reps antes del fallo.</li>
-    <li><strong>Lateral raise</strong>: con 20 lbs llegaste a 8 reps dos
-    veces (RIR 1) → sube a ~22.5-25 lbs. A 30 lbs fallaste en la rep 5 →
-    ese salto fue muy grande, la próxima vez sube de forma más
-    gradual.</li>
-    </ul>
-    </blockquote>
-    <h2 id="día-4--lower-posterior--atlético">Día 4 — Lower posterior +
-    atlético</h2>
-    <p>Power primer: 4-6 aceleraciones cortas o saltos de bajo
-    volumen.</p>
-    <table>
-    <thead>
-    <tr>
-    <th>#</th>
-    <th>Ejercicio</th>
-    <th>Series x Reps</th>
-    <th>RIR</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-    <td>1</td>
-    <td>Hip thrust</td>
-    <td>4 x 5-8</td>
-    <td>1-2</td>
-    </tr>
-    <tr>
-    <td>2</td>
-    <td>Squat pattern más ligero</td>
-    <td>3 x 6-8</td>
-    <td>1-2</td>
-    </tr>
-    <tr>
-    <td>3</td>
-    <td>Isquios (segundo estímulo): RDL (3 x 6-8) o curl (3 x 6-8)</td>
-    <td>—</td>
-    <td>1-2</td>
-    </tr>
-    <tr>
-    <td>4</td>
-    <td>Aductores: Copenhagen plank o máquina</td>
-    <td>2-4 series</td>
-    <td>—</td>
-    </tr>
-    <tr>
-    <td>5</td>
-    <td>Loaded carries (farmer o suitcase)</td>
-    <td>4-8 minutos totales</td>
-    <td>—</td>
-    </tr>
-    </tbody>
-    </table>
-    <p>Core: elegir 1 anti-extensión (ab wheel o dead bug) + 1
-    anti-rotación (Pallof), 2-3 series cada uno.</p>
-    <h2 id="día-5--cardio-bicicleta-estacionaria--complemento">Día 5 —
-    Cardio (bicicleta estacionaria) + complemento</h2>
-    <h3 id="bloque-1-hiit-en-bicicleta-estacionaria-15-min-total">Bloque
-    1: HIIT en bicicleta estacionaria (15 min total)</h3>
-    <table>
-    <thead>
-    <tr>
-    <th>Bloque</th>
-    <th>Duración</th>
-    <th>Intensidad</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-    <td>Calentamiento</td>
-    <td>3 min</td>
-    <td>Suave, RPE 3-4/10, cadencia progresiva</td>
-    </tr>
-    <tr>
-    <td>Intervalos</td>
-    <td>8 x (30 seg fuerte / 60 seg suave) = 12 min</td>
-    <td>Fuerte: RPE 8-9/10 (casi máximo esfuerzo sostenible) · Suave:
-    RPE 3-4/10</td>
-    </tr>
-    </tbody>
-    </table>
-    <p><em>(No se agrega enfriamiento aparte porque el último intervalo
-    suave ya cumple esa función; si prefieres, puedes agregar 2 min
-    extra suaves al final.)</em></p>
-    <h3
-    id="bloque-2-complemento-elegir-uno-según-cómo-te-sientas">Bloque 2:
-    complemento (elegir uno según cómo te sientas)</h3>
-    <ul>
-    <li><strong>Trabajo faltante de la semana</strong>: 2-3 ejercicios
-    accesorios que hayan quedado cortos (ej. core
-    anti-rotación/anti-extensión si no llegaste al Día 4, brazos, rear
-    delt/face pulls, o un extra de movilidad de cadera/tobillo).</li>
-    <li><strong>Descanso activo</strong>: solo estiramiento y movilidad
-    general 10-15 min, sin agregar más carga — válido especialmente si
-    el resto de la semana fue exigente.</li>
-    </ul>
-    <p>Frecuencia: 1 vez por semana, idealmente en un día separado de
-    las sesiones de piernas (Día 2 y Día 4) para no acumular fatiga en
-    las mismas 24-48 horas.</p>
-    <h2 id="reglas-de-recuperación">Reglas de recuperación</h2>
-    <ul>
-    <li><strong>Progresión de carga</strong>: si completas 8
-    repeticiones en una serie (el techo de casi todos los rangos), sube
-    el peso la próxima vez que hagas ese ejercicio.</li>
-    <li><strong>Deload cada 4-8 semanas</strong>: reducir series ~1/3,
-    mantener RIR 3.</li>
-    <li><strong>Regla de sobre-entrenamiento</strong>: si el rendimiento
-    baja dos sesiones seguidas, no es falta de motivación, es falta de
-    recuperación.</li>
-    <li><strong>Trackear solo 3 cosas</strong>: carga del top set, reps
-    y RIR — en bench, pull up, deadlift o squat pattern (ver sección de
-    seguimiento abajo).</li>
-    </ul>
-    <h2 id="si-solo-aplicas-dos-cambios">Si solo aplicas dos
-    cambios</h2>
-    <ol type="1">
-    <li>Bench dos veces por semana: un día pesado + un día secundario
-    (paused).</li>
-    <li>Mantener la mayoría de las series compuestas a RIR 1-3, y
-    reservar RIR 0 solo para unas pocas series seguras.</li>
-    </ol>
-    <p>Esto normalmente mejora la fuerza más rápido y te deja más fresco
-    para deporte.</p>
-    <hr />
-    <h2 id="seguimiento-de-progreso">Seguimiento de progreso</h2>
-    <p>Registrar cada sesión: fecha, ejercicio, cada serie (carga x
-    reps), RIR real.</p>
-    <p>Foco principal en los 3 movimientos clave: <strong>Bench
-    press</strong>, <strong>Weighted pull up</strong>, <strong>Hex bar
-    deadlift / V-squat</strong>.</p>
-    <h3 id="historial-de-series-tabla-ordenable">Historial de series
-    (tabla ordenable)</h3>
-    <p>Cada fila es una serie individual (no solo el top set). Haz clic
-    en un encabezado para ordenar por esa columna; Shift+clic para
-    ordenar por varias columnas a la vez (la primera manda, las
-    siguientes desempatan). Usa el filtro para buscar por ejercicio.
-    Esta tabla se genera a partir de <code>progreso.csv</code>, el
-    archivo donde se registra cada sesión.</p>
-    <div id="progreso-table">
+    <div id="rutina-gate" class="rutina-gate">
+      <p>Esta página está protegida. Ingresa la contraseña para verla.</p>
+      <input type="password" id="rutina-gate-input" autocomplete="off" autofocus>
+      <button id="rutina-gate-submit" type="button">Entrar</button>
+      <p class="rutina-gate-error" id="rutina-gate-error">Contraseña incorrecta.</p>
+    </div>
+    <div id="rutina-content" style="display:none">
+      <h1 id="rutina-de-gimnasio">Rutina de gimnasio</h1>
+      <p>Estructura tipo "strength athlete": 4 días de fuerza (base +
+      fuerza secundaria/potencia + posterior/atlético) más 1 día de
+      cardio en elíptica. RIR = Reps In Reserve (repeticiones en
+      reserva).</p>
+      <h2 id="día-1--upper-strength">Día 1 — Upper strength</h2>
+      <table>
+      <thead>
+      <tr>
+      <th>#</th>
+      <th>Ejercicio</th>
+      <th>Series x Reps</th>
+      <th>RIR</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Bench press</td>
+      <td>5 x 3-5</td>
+      <td>1-2</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>Weighted pull up (dominada lastrada)</td>
+      <td>4 x 4-6</td>
+      <td>1-2</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>Overhead press</td>
+      <td>3 x 5-7</td>
+      <td>1-2</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>Row (remo)</td>
+      <td>3 x 6-8</td>
+      <td>1-2</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>Rear delt o face pulls</td>
+      <td>3 x 6-8</td>
+      <td>1-2</td>
+      </tr>
+      <tr>
+      <td>6</td>
+      <td>Un tríceps, un bíceps</td>
+      <td>3 x 6-8</td>
+      <td>1-2</td>
+      </tr>
+      </tbody>
+      </table>
+      <blockquote>
+      <p><strong>Progreso (sesión 21 jul) — pesos para la próxima
+      sesión</strong>, según la regla "si llegas a 8 reps, sube
+      peso":</p>
+      <ul>
+      <li><strong>Bench press</strong>: en 140 lbs llegaste a 5 reps
+      (techo del rango 3-5) a RIR 1 → sube ligero, prueba ~145 lbs. El
+      calentamiento de 90 lbs llegó a 8 reps → sube ese escalón a
+      ~95-100 lbs. Hombro izquierdo volvió a molestar un poco — seguir
+      vigilando, si empeora bajar volumen de empuje.</li>
+      <li><strong>Weighted pull up</strong>: con banda verde llegaste a
+      8 reps dos veces → siguiente paso ya lo diste en la misma sesión
+      (sin asistencia). Sin asistencia llegaste a 5 y 4 reps a RIR 1,
+      dentro del rango 4-6 → mantener sin asistencia, buscar 6 reps
+      antes de agregar peso extra.</li>
+      <li><strong>Overhead press</strong>: a 80 lbs llegaste a 8 reps a
+      RIR 2 → sube ese primer set a ~85-90 lbs. A 110 lbs fallaste en la
+      rep 4 (RIR 0) y a 100 lbs también llegaste al fallo en la rep 5 →
+      mantener el tope en ~100-105 lbs pero cortar 1-2 reps antes del
+      fallo (RIR 1-2), no subir a 110 todavía.</li>
+      <li><strong>Seated row</strong>: las 3 series (100, 140 y 170 lbs)
+      llegaron a 8 reps → sube las tres ~5-10 lbs (ej. 110, 145-150,
+      175-180), pero en la de 170 dejaste el RIR en 0 — en la próxima
+      corta la serie 1-2 reps antes del fallo.</li>
+      </ul>
+      </blockquote>
+      <h2 id="día-2--lower-strength">Día 2 — Lower strength</h2>
+      <table>
+      <thead>
+      <tr>
+      <th>#</th>
+      <th>Ejercicio</th>
+      <th>Series x Reps</th>
+      <th>RIR</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Smith machine sumo deadlift</td>
+      <td>4 x 3-5</td>
+      <td>1-2</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>V-squat</td>
+      <td>3 x 5-8</td>
+      <td>1-2</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>Split squat o walking lunge</td>
+      <td>3 x 6-8 por pierna</td>
+      <td>1-2</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>Isquios: Nordic (2-4 x 4-6) o hamstring curl (3 x 6-8)</td>
+      <td>—</td>
+      <td>1-2</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>Calf raise 3 x 6-8 (pesado) + tibialis raises 2 x 10-12</td>
+      <td>—</td>
+      <td>1-2</td>
+      </tr>
+      </tbody>
+      </table>
+      <blockquote>
+      <p><strong>Cambio de ejercicio (sesión 23 jul):</strong> el Smith
+      machine deadlift (postura convencional) se sintió poco en las
+      piernas. Se mantiene el mismo Smith machine, pero con postura
+      <strong>sumo</strong> (pies más separados, puntas afuera, torso
+      más vertical) para meter más cuádriceps y aductor sin perder la
+      sensación en espalda baja. Como cambia el patrón, no arranques
+      directo en 180 lbs: recalibra el peso desde algo cómodo y sube
+      según cómo se sienta antes de comparar contra los pesos del
+      deadlift convencional.</p>
+      </blockquote>
+      <p>Cierre: 5 minutos de movilidad (caderas, tobillos).</p>
+      <blockquote>
+      <p>Alternativas si en algún momento quieres variar el estímulo:
+      <strong>Dumbbell Romanian deadlift (DB RDL)</strong> (respeta
+      mejor la bisagra de cadera libre, más énfasis en isquios/glúteo,
+      subir a 6-10 reps por el límite de agarre) o <strong>cable
+      pull-through</strong> (tensión constante, bajo riesgo lumbar,
+      mejor como accesorio que como movimiento principal).</p>
+      </blockquote>
+      <blockquote>
+      <p><strong>Progreso (sesión 23 jul) — pesos para la próxima
+      sesión</strong>, según la regla "si llegas a 8 reps, sube
+      peso":</p>
+      <ul>
+      <li><strong>Hack squat (variante de V-squat)</strong>: en 180 lbs
+      llegaste a 5 reps a RIR 1 en ambas series (por debajo del rango
+      5-8) → mantener 180 lbs y buscar 6-8 reps antes de subir
+      peso.</li>
+      <li><strong>Prone leg curl</strong>: a 100 lbs llegaste a 8 reps
+      con RIR 3 (te sobró mucho) → sube bastante ese primer set, ej.
+      ~115-120 lbs. A 140 y 150 lbs llegaste al fallo (RIR 0) en 7 y 4
+      reps → bajar un poco esas series (ej. ~130-135 lbs) y cortar 1-2
+      reps antes del fallo.</li>
+      <li><strong>Adductor (superset)</strong>: a 95 lbs llegaste a 10
+      reps con RIR 3 (te sobró mucho) → arranca más alto la próxima vez,
+      ej. ~110-120 lbs. En 140 lbs pasaste de 8 reps (RIR 2) a 6 reps al
+      fallo → mantener ~140-145 lbs en esas series y buscar 8 reps
+      estables antes de subir más.</li>
+      <li><strong>Abductor (superset)</strong>: a 140 lbs llegaste a 10
+      reps con RIR 3 → sube bastante, ej. ~160-170 lbs. A 185 lbs
+      también llegaste a 10 reps (RIR 2) → sube a ~195-200 lbs. A 230
+      lbs llegaste a 8 reps pero al fallo (RIR 0) → subir solo un poco
+      (ej. ~235-240 lbs) y cortar 1-2 reps antes del fallo.</li>
+      </ul>
+      </blockquote>
+      <h2 id="día-3--upper-strength-secundario--power">Día 3 — Upper
+      strength (secundario) + power</h2>
+      <p>Power primer: 3-5 series de 2-3 saltos o lanzamientos de balón
+      medicinal.</p>
+      <table>
+      <thead>
+      <tr>
+      <th>#</th>
+      <th>Ejercicio</th>
+      <th>Series x Reps</th>
+      <th>RIR</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Incline bench o paused bench</td>
+      <td>4 x 5-8</td>
+      <td>1-2</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>Pulldown o pull over</td>
+      <td>3 x 6-8</td>
+      <td>1-2</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>Chest machine o fly</td>
+      <td>3 x 6-8</td>
+      <td>1-2</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>Row variation</td>
+      <td>3 x 6-8</td>
+      <td>1-2</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>Lateral raise</td>
+      <td>3 x 6-8</td>
+      <td>1-2</td>
+      </tr>
+      <tr>
+      <td>6</td>
+      <td>Brazos (opcional)</td>
+      <td>2 x 6-8</td>
+      <td>1-2</td>
+      </tr>
+      </tbody>
+      </table>
+      <blockquote>
+      <p><strong>Progreso (sesión 24 jul) — pesos para la próxima
+      sesión</strong>, según la regla "si llegas a 8 reps, sube
+      peso":</p>
+      <ul>
+      <li><strong>Incline bench</strong>: en 110 lbs llegaste a 7 reps
+      dos veces (RIR 1) pero fallaste en la tercera (RIR 0) → mantener
+      110 lbs y buscar 8 reps antes de subir.</li>
+      <li><strong>Lateral pulldown</strong>: a 180 lbs llegaste a 8 reps
+      (RIR 2) → sube a ~185-190 lbs. A 190 lbs también llegaste a 8 (RIR
+      1) → sube a ~195-200 lbs. A 200 lbs fallaste en la rep 6 →
+      mantener 200 hasta llegar a 8. (La serie de 187.5 lbs no cuenta,
+      se interrumpió por un error de la máquina.)</li>
+      <li><strong>Chest fly machine</strong>: a 90 lbs llegaste a 8 reps
+      con RIR 3 (sobró mucho) → sube bastante, ej. ~105-110 lbs. A 140
+      lbs también llegaste a 8 (RIR 2) → sube a ~145-150 lbs. A 180 y
+      160 lbs fallaste (4 y 5 reps) → bajar esas series a ~155-165 lbs y
+      cortar antes del fallo.</li>
+      <li><strong>Low rows</strong>: a 140 lbs llegaste a 8 reps con RIR
+      1 → sube a ~145-150 lbs. A 150 lbs llegaste a 8 pero al fallo (RIR
+      0), y la siguiente serie a 150 bajó a 7 → mantener ~145-150 lbs y
+      cortar 1-2 reps antes del fallo.</li>
+      <li><strong>Lateral raise</strong>: con 20 lbs llegaste a 8 reps
+      dos veces (RIR 1) → sube a ~22.5-25 lbs. A 30 lbs fallaste en la
+      rep 5 → ese salto fue muy grande, la próxima vez sube de forma más
+      gradual.</li>
+      </ul>
+      </blockquote>
+      <h2 id="día-4--lower-posterior--atlético">Día 4 — Lower posterior
+      + atlético</h2>
+      <p>Power primer: 4-6 aceleraciones cortas o saltos de bajo
+      volumen.</p>
+      <table>
+      <thead>
+      <tr>
+      <th>#</th>
+      <th>Ejercicio</th>
+      <th>Series x Reps</th>
+      <th>RIR</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1</td>
+      <td>Hip thrust</td>
+      <td>4 x 5-8</td>
+      <td>1-2</td>
+      </tr>
+      <tr>
+      <td>2</td>
+      <td>Squat pattern más ligero</td>
+      <td>3 x 6-8</td>
+      <td>1-2</td>
+      </tr>
+      <tr>
+      <td>3</td>
+      <td>Isquios (segundo estímulo): RDL (3 x 6-8) o curl (3 x
+      6-8)</td>
+      <td>—</td>
+      <td>1-2</td>
+      </tr>
+      <tr>
+      <td>4</td>
+      <td>Aductores: Copenhagen plank o máquina</td>
+      <td>2-4 series</td>
+      <td>—</td>
+      </tr>
+      <tr>
+      <td>5</td>
+      <td>Loaded carries (farmer o suitcase)</td>
+      <td>4-8 minutos totales</td>
+      <td>—</td>
+      </tr>
+      </tbody>
+      </table>
+      <p>Core: elegir 1 anti-extensión (ab wheel o dead bug) + 1
+      anti-rotación (Pallof), 2-3 series cada uno.</p>
+      <h2 id="día-5--cardio-bicicleta-estacionaria--complemento">Día 5 —
+      Cardio (bicicleta estacionaria) + complemento</h2>
+      <h3
+      id="bloque-1-hiit-en-bicicleta-estacionaria-15-min-total">Bloque
+      1: HIIT en bicicleta estacionaria (15 min total)</h3>
+      <table>
+      <thead>
+      <tr>
+      <th>Bloque</th>
+      <th>Duración</th>
+      <th>Intensidad</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>Calentamiento</td>
+      <td>3 min</td>
+      <td>Suave, RPE 3-4/10, cadencia progresiva</td>
+      </tr>
+      <tr>
+      <td>Intervalos</td>
+      <td>8 x (30 seg fuerte / 60 seg suave) = 12 min</td>
+      <td>Fuerte: RPE 8-9/10 (casi máximo esfuerzo sostenible) · Suave:
+      RPE 3-4/10</td>
+      </tr>
+      </tbody>
+      </table>
+      <p><em>(No se agrega enfriamiento aparte porque el último
+      intervalo suave ya cumple esa función; si prefieres, puedes
+      agregar 2 min extra suaves al final.)</em></p>
+      <h3
+      id="bloque-2-complemento-elegir-uno-según-cómo-te-sientas">Bloque
+      2: complemento (elegir uno según cómo te sientas)</h3>
+      <ul>
+      <li><strong>Trabajo faltante de la semana</strong>: 2-3 ejercicios
+      accesorios que hayan quedado cortos (ej. core
+      anti-rotación/anti-extensión si no llegaste al Día 4, brazos, rear
+      delt/face pulls, o un extra de movilidad de cadera/tobillo).</li>
+      <li><strong>Descanso activo</strong>: solo estiramiento y
+      movilidad general 10-15 min, sin agregar más carga — válido
+      especialmente si el resto de la semana fue exigente.</li>
+      </ul>
+      <p>Frecuencia: 1 vez por semana, idealmente en un día separado de
+      las sesiones de piernas (Día 2 y Día 4) para no acumular fatiga en
+      las mismas 24-48 horas.</p>
+      <h2 id="reglas-de-recuperación">Reglas de recuperación</h2>
+      <ul>
+      <li><strong>Progresión de carga</strong>: si completas 8
+      repeticiones en una serie (el techo de casi todos los rangos),
+      sube el peso la próxima vez que hagas ese ejercicio.</li>
+      <li><strong>Deload cada 4-8 semanas</strong>: reducir series ~1/3,
+      mantener RIR 3.</li>
+      <li><strong>Regla de sobre-entrenamiento</strong>: si el
+      rendimiento baja dos sesiones seguidas, no es falta de motivación,
+      es falta de recuperación.</li>
+      <li><strong>Trackear solo 3 cosas</strong>: carga del top set,
+      reps y RIR — en bench, pull up, deadlift o squat pattern (ver
+      sección de seguimiento abajo).</li>
+      </ul>
+      <h2 id="si-solo-aplicas-dos-cambios">Si solo aplicas dos
+      cambios</h2>
+      <ol type="1">
+      <li>Bench dos veces por semana: un día pesado + un día secundario
+      (paused).</li>
+      <li>Mantener la mayoría de las series compuestas a RIR 1-3, y
+      reservar RIR 0 solo para unas pocas series seguras.</li>
+      </ol>
+      <p>Esto normalmente mejora la fuerza más rápido y te deja más
+      fresco para deporte.</p>
+      <hr />
+      <h2 id="seguimiento-de-progreso">Seguimiento de progreso</h2>
+      <p>Registrar cada sesión: fecha, ejercicio, cada serie (carga x
+      reps), RIR real.</p>
+      <p>Foco principal en los 3 movimientos clave: <strong>Bench
+      press</strong>, <strong>Weighted pull up</strong>, <strong>Hex bar
+      deadlift / V-squat</strong>.</p>
+      <h3 id="historial-de-series-tabla-ordenable">Historial de series
+      (tabla ordenable)</h3>
+      <p>Cada fila es una serie individual (no solo el top set). Haz
+      clic en un encabezado para ordenar por esa columna; Shift+clic
+      para ordenar por varias columnas a la vez (la primera manda, las
+      siguientes desempatan). Usa el filtro para buscar por ejercicio.
+      Esta tabla se genera a partir de <code>progreso.csv</code>, el
+      archivo donde se registra cada sesión.</p>
+      <div id="progreso-table">
   <input
     type="text"
     id="progreso-table-filtro"
@@ -1435,14 +1487,14 @@
 })();
 </script>
 
-    <h3 id="evolución-de-desempeño-gráfico-interactivo">Evolución de
-    desempeño (gráfico interactivo)</h3>
-    <p>Elige un día de rutina, un ejercicio de ese día y una métrica
-    para ver cómo ha evolucionado tu desempeño a través del tiempo. Si
-    un ejercicio tiene menos de 2 sesiones registradas, el gráfico
-    aparece vacío con un aviso — todavía no hay suficiente historial
-    para mostrar una tendencia confiable.</p>
-    <div id="progreso-chart">
+      <h3 id="evolución-de-desempeño-gráfico-interactivo">Evolución de
+      desempeño (gráfico interactivo)</h3>
+      <p>Elige un día de rutina, un ejercicio de ese día y una métrica
+      para ver cómo ha evolucionado tu desempeño a través del tiempo. Si
+      un ejercicio tiene menos de 2 sesiones registradas, el gráfico
+      aparece vacío con un aviso — todavía no hay suficiente historial
+      para mostrar una tendencia confiable.</p>
+      <div id="progreso-chart">
   <div class="progreso-chart-controles" style="display:flex; gap:1rem; flex-wrap:wrap; margin-bottom:0.75rem;">
     <label>Día:
       <select id="dia-select">
@@ -2271,8 +2323,55 @@
 })();
 </script>
 
-    <p>Cada 4-8 semanas: revisar tendencia del top set y decidir si toca
-    deload.</p>
+      <p>Cada 4-8 semanas: revisar tendencia del top set y decidir si
+      toca deload.</p>
+    </div>
   </div>
+  <script>
+    (function () {
+      var HASH = "ccad165205a0fe2647e2dead48e0c088cd5cff60d39bf7bcbe7b57e43f597802";
+      var STORAGE_KEY = "rutina-unlocked";
+      var gate = document.getElementById("rutina-gate");
+      var content = document.getElementById("rutina-content");
+      var input = document.getElementById("rutina-gate-input");
+      var error = document.getElementById("rutina-gate-error");
+
+      function unlock() {
+        gate.style.display = "none";
+        content.style.display = "";
+      }
+
+      function sha256Hex(text) {
+        var data = new TextEncoder().encode(text);
+        return crypto.subtle.digest("SHA-256", data).then(function (buf) {
+          return Array.prototype.map
+            .call(new Uint8Array(buf), function (b) {
+              return b.toString(16).padStart(2, "0");
+            })
+            .join("");
+        });
+      }
+
+      function tryUnlock() {
+        sha256Hex(input.value).then(function (hex) {
+          if (hex === HASH) {
+            sessionStorage.setItem(STORAGE_KEY, "1");
+            unlock();
+          } else {
+            error.style.display = "block";
+          }
+        });
+      }
+
+      if (sessionStorage.getItem(STORAGE_KEY) === "1") {
+        unlock();
+      } else {
+        document.getElementById("rutina-gate-submit").addEventListener("click", tryUnlock);
+        input.addEventListener("keydown", function (e) {
+          if (e.key === "Enter") tryUnlock();
+        });
+      }
+    })();
+  </script>
 </body>
 </html>
