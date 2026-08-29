@@ -491,39 +491,49 @@
       </tbody>
       </table>
       <blockquote>
-      <p><strong>Progreso (sesión 19 ago) — pesos para la próxima
+      <p><strong>Progreso (sesión 28 ago) — pesos para la próxima
       sesión</strong>, según la regla "si llegas a 8 reps, sube
       peso":</p>
       <ul>
-      <li><strong>Hip thrust</strong>: llegaste a 200 lbs x 8 reps con
-      RIR 1 (sin fallar) — mejora clara sobre el 3 ago, cuando 200 lbs
-      solo llegó a 8 reps al fallo (RIR 0). El problema es que
-      <strong>200 lbs es el peso máximo de esta máquina</strong>, así
-      que ya no hay margen para seguir subiendo peso ahí. La próxima vez
-      que toque este ejercicio, cámbiate al Smith machine para poder
-      seguir progresando — probablemente necesites recalibrar el peso
-      inicial ahí, ya que la resistencia no es directamente comparable a
-      la máquina de hip thrust.</li>
-      <li><strong>Goblet squat</strong>: subiste con margen en las tres
-      series (120, 130, 140 lbs, con RIR 2, 1, 1) y llegaste a 8 reps
-      incluso en la más pesada, sin fallar → sube a ~145-150 lbs la
-      próxima vez. Ojo: con dos mancuernas de 75 lbs cada una, 150 lbs
-      es el techo de lo que puedes cargar con las mancuernas disponibles
-      — cuando llegues ahí vas a necesitar otra forma de sobrecarga (ej.
-      chaleco con peso, o cambiar a un squat con barra/Smith).</li>
-      <li><strong>RDL</strong>: otra vez limpio en las tres series (100,
-      120, 140 lbs, RIR 2, 1, 1) — llegaste a 8 reps en las tres sin
-      fallar, incluyendo la más pesada → sube a ~145-150 lbs la próxima
-      vez. Igual que en goblet squat, esto se acerca al techo de 150 lbs
-      con las mancuernas disponibles, así que probablemente sea el
-      último salto antes de necesitar otro método de sobrecarga.</li>
-      <li><strong>Lateral lunge</strong>: llegaste a 50 lbs x 6 reps
-      (RIR 1), pero dijiste que ya estabas cansado en este punto y ahí
-      terminaste la sesión. Como no llegaste a 8 reps, no está claro si
-      el techo real es más alto o si fue la fatiga acumulada del resto
-      del día — pediste hacer este ejercicio antes de RDL y goblet squat
-      la próxima vez, así que respeta ese cambio de orden para tener una
-      lectura más limpia de cuánto puedes subir.</li>
+      <li><strong>Hip thrust</strong>: el orden real de la sesión fue
+      goblet squat → lateral lunge → hip thrust → RDL, así que este
+      ejercicio se hizo <strong>tercero</strong>, ya con dos movimientos
+      de pierna pesados encima. Aun así, seguiste en la misma máquina
+      (tope de 200 lbs) en vez de cambiar al Smith como se sugirió el 19
+      ago, y lograste la mejor sesión de volumen registrada:
+      <strong>cuatro series de 200 lbs x 8 reps</strong>, todas sin
+      fallar, terminando en RIR 1 — más impresionante todavía
+      considerando que llegaste ahí con fatiga acumulada. Si quieres
+      seguir subiendo carga real (no solo volumen), el cambio a Smith
+      machine sigue pendiente para la próxima vez que toque este
+      ejercicio.</li>
+      <li><strong>Goblet squat</strong>: primer ejercicio de la sesión,
+      fresco. Llegaste al techo de 150 lbs (dos mancuernas de 75 lbs)
+      con <strong>margen de sobra</strong> — las tres series (130, 140,
+      150) mantuvieron RIR 2 y 8 reps completas, sin ningún indicio de
+      fatiga incluso en la más pesada. Ya no hay más peso disponible con
+      mancuernas → es momento de cambiar de método de sobrecarga:
+      chaleco con peso sobre las mancuernas, o pasar a un squat con
+      Smith machine.</li>
+      <li><strong>Lateral lunge</strong>: buena mejora — llegaste a 60
+      lbs x 6 reps (RIR 1) sin fallar, superando el techo de fatiga del
+      19 ago (que había sido 50 lbs). Se hizo segundo en la sesión
+      (justo después de goblet squat), lo cual cumple parte de lo que
+      pediste (antes de RDL), pero no del todo — pediste hacerlo antes
+      de goblet squat también. Si quieres una lectura más limpia de
+      cuánto puedes subir en este ejercicio, muévelo al inicio de la
+      sesión.</li>
+      <li><strong>RDL</strong>: se hizo al final, cuarto y último,
+      después de goblet squat, lateral lunge <strong>e</strong> hip
+      thrust — la fatiga acumulada de tres ejercicios pesados antes
+      explica bien por qué el peso bajó de 140 lbs (19 ago) a 120 lbs
+      hoy. Dentro de la sesión, el patrón fue bueno: 8 reps (RIR 1),
+      luego una caída puntual a 5 reps (RIR 1, "cansado en general"), y
+      de vuelta a 8 reps (RIR 1) en la última — una caída aislada y
+      recuperada, no una tendencia a la baja. La próxima vez,
+      reconstruye el peso gradualmente hacia 140-150 lbs en vez de
+      saltar directo, ya que hoy partiste más abajo de lo último
+      probado.</li>
       <li><strong>Cable pull-through</strong>: sin datos nuevos desde la
       sesión del 25 jul — la serie de 50 lbs llegó a 8 reps (RIR 2),
       pero se sintió principalmente en espalda baja y no en piernas.
@@ -682,6 +692,174 @@
   // registrada en progreso.csv).
   const COLUMNAS = [{"key": "fecha", "label": "Fecha", "tipo": "texto"}, {"key": "dia", "label": "Día", "tipo": "numero"}, {"key": "ejercicio", "label": "Ejercicio", "tipo": "texto"}, {"key": "set_num", "label": "Set", "tipo": "numero"}, {"key": "peso_lbs", "label": "Peso (lbs)", "tipo": "numero"}, {"key": "reps", "label": "Reps", "tipo": "numero"}, {"key": "rir", "label": "RIR", "tipo": "numero"}, {"key": "tipo", "label": "Tipo", "tipo": "texto"}, {"key": "es_top_set", "label": "Top set", "tipo": "texto"}, {"key": "notas", "label": "Notas", "tipo": "texto"}];
   const FILAS_ORIGINALES = [
+  {
+    "fecha": "2026-08-28",
+    "dia": 4,
+    "ejercicio": "RDL",
+    "set_num": 3,
+    "peso_lbs": 120.0,
+    "reps": 8,
+    "rir": 1.0,
+    "tipo": "trabajo",
+    "es_top_set": "",
+    "notas": "Descanso 2 min"
+  },
+  {
+    "fecha": "2026-08-28",
+    "dia": 4,
+    "ejercicio": "RDL",
+    "set_num": 2,
+    "peso_lbs": 120.0,
+    "reps": 5,
+    "rir": 1.0,
+    "tipo": "trabajo",
+    "es_top_set": "",
+    "notas": "Descanso 2 min; cansado en general"
+  },
+  {
+    "fecha": "2026-08-28",
+    "dia": 4,
+    "ejercicio": "RDL",
+    "set_num": 1,
+    "peso_lbs": 120.0,
+    "reps": 8,
+    "rir": 1.0,
+    "tipo": "trabajo",
+    "es_top_set": "✓",
+    "notas": "Descanso 2 min"
+  },
+  {
+    "fecha": "2026-08-28",
+    "dia": 4,
+    "ejercicio": "Lateral lunge",
+    "set_num": 3,
+    "peso_lbs": 60.0,
+    "reps": 6,
+    "rir": 1.0,
+    "tipo": "trabajo",
+    "es_top_set": "✓",
+    "notas": "Descanso 3 min"
+  },
+  {
+    "fecha": "2026-08-28",
+    "dia": 4,
+    "ejercicio": "Lateral lunge",
+    "set_num": 2,
+    "peso_lbs": 50.0,
+    "reps": 6,
+    "rir": 2.0,
+    "tipo": "trabajo",
+    "es_top_set": "",
+    "notas": "Descanso 3 min; 30 seg descanso entre cada lado"
+  },
+  {
+    "fecha": "2026-08-28",
+    "dia": 4,
+    "ejercicio": "Lateral lunge",
+    "set_num": 1,
+    "peso_lbs": 40.0,
+    "reps": 6,
+    "rir": 2.0,
+    "tipo": "trabajo",
+    "es_top_set": "",
+    "notas": "Descanso 3 min"
+  },
+  {
+    "fecha": "2026-08-28",
+    "dia": 4,
+    "ejercicio": "Hip thrust",
+    "set_num": 5,
+    "peso_lbs": 200.0,
+    "reps": 8,
+    "rir": 1.0,
+    "tipo": "trabajo",
+    "es_top_set": "",
+    "notas": "Descanso 3 min"
+  },
+  {
+    "fecha": "2026-08-28",
+    "dia": 4,
+    "ejercicio": "Hip thrust",
+    "set_num": 4,
+    "peso_lbs": 200.0,
+    "reps": 8,
+    "rir": 2.0,
+    "tipo": "trabajo",
+    "es_top_set": "",
+    "notas": "Descanso 4 min"
+  },
+  {
+    "fecha": "2026-08-28",
+    "dia": 4,
+    "ejercicio": "Hip thrust",
+    "set_num": 3,
+    "peso_lbs": 200.0,
+    "reps": 8,
+    "rir": 2.0,
+    "tipo": "trabajo",
+    "es_top_set": "",
+    "notas": "Descanso 3 min"
+  },
+  {
+    "fecha": "2026-08-28",
+    "dia": 4,
+    "ejercicio": "Hip thrust",
+    "set_num": 2,
+    "peso_lbs": 200.0,
+    "reps": 8,
+    "rir": 2.0,
+    "tipo": "trabajo",
+    "es_top_set": "✓",
+    "notas": "Descanso 2 min"
+  },
+  {
+    "fecha": "2026-08-28",
+    "dia": 4,
+    "ejercicio": "Hip thrust",
+    "set_num": 1,
+    "peso_lbs": 70.0,
+    "reps": 6,
+    "rir": null,
+    "tipo": "calentamiento",
+    "es_top_set": "",
+    "notas": "Descanso 1 min; Warming up"
+  },
+  {
+    "fecha": "2026-08-28",
+    "dia": 4,
+    "ejercicio": "Goblet squat",
+    "set_num": 3,
+    "peso_lbs": 150.0,
+    "reps": 8,
+    "rir": 2.0,
+    "tipo": "trabajo",
+    "es_top_set": "✓",
+    "notas": "Descanso 3 min; estilo maletas"
+  },
+  {
+    "fecha": "2026-08-28",
+    "dia": 4,
+    "ejercicio": "Goblet squat",
+    "set_num": 2,
+    "peso_lbs": 140.0,
+    "reps": 8,
+    "rir": 2.0,
+    "tipo": "trabajo",
+    "es_top_set": "",
+    "notas": "Descanso 2 min"
+  },
+  {
+    "fecha": "2026-08-28",
+    "dia": 4,
+    "ejercicio": "Goblet squat",
+    "set_num": 1,
+    "peso_lbs": 130.0,
+    "reps": 8,
+    "rir": 2.0,
+    "tipo": "trabajo",
+    "es_top_set": "",
+    "notas": "Descanso 2 min"
+  },
   {
     "fecha": "2026-08-25",
     "dia": 3,
@@ -5782,53 +5960,61 @@
           "fechas": [
             "2026-07-25",
             "2026-08-03",
-            "2026-08-19"
+            "2026-08-19",
+            "2026-08-28"
           ],
           "valores": [
             57.5,
             97.5,
-            130.0
+            130.0,
+            140.0
           ],
-          "num_sesiones": 3
+          "num_sesiones": 4
         },
         "Peso máximo cómodo — series de 8+ reps (lbs)": {
           "fechas": [
             "2026-07-25",
             "2026-08-03",
-            "2026-08-19"
+            "2026-08-19",
+            "2026-08-28"
           ],
           "valores": [
             75.0,
             120.0,
-            140.0
+            140.0,
+            150.0
           ],
-          "num_sesiones": 3
+          "num_sesiones": 4
         },
         "Peso máximo cómodo — series de 5+ reps (lbs)": {
           "fechas": [
             "2026-07-25",
             "2026-08-03",
-            "2026-08-19"
+            "2026-08-19",
+            "2026-08-28"
           ],
           "valores": [
             75.0,
             120.0,
-            140.0
+            140.0,
+            150.0
           ],
-          "num_sesiones": 3
+          "num_sesiones": 4
         },
         "1RM estimado, fórmula de Epley (lbs)": {
           "fechas": [
             "2026-07-25",
             "2026-08-03",
-            "2026-08-19"
+            "2026-08-19",
+            "2026-08-28"
           ],
           "valores": [
             95.0,
             152.0,
-            177.3
+            177.3,
+            190.0
           ],
-          "num_sesiones": 3
+          "num_sesiones": 4
         }
       }
     },
@@ -5924,53 +6110,61 @@
           "fechas": [
             "2026-07-25",
             "2026-08-03",
-            "2026-08-19"
+            "2026-08-19",
+            "2026-08-28"
           ],
           "valores": [
             142.7,
             184.0,
-            195.4
+            195.4,
+            200.0
           ],
-          "num_sesiones": 3
+          "num_sesiones": 4
         },
         "Peso máximo cómodo — series de 8+ reps (lbs)": {
           "fechas": [
             "2026-07-25",
             "2026-08-03",
-            "2026-08-19"
+            "2026-08-19",
+            "2026-08-28"
           ],
           "valores": [
             160.0,
             200.0,
+            200.0,
             200.0
           ],
-          "num_sesiones": 3
+          "num_sesiones": 4
         },
         "Peso máximo cómodo — series de 5+ reps (lbs)": {
           "fechas": [
             "2026-07-25",
             "2026-08-03",
-            "2026-08-19"
+            "2026-08-19",
+            "2026-08-28"
           ],
           "valores": [
             180.0,
             200.0,
+            200.0,
             200.0
           ],
-          "num_sesiones": 3
+          "num_sesiones": 4
         },
         "1RM estimado, fórmula de Epley (lbs)": {
           "fechas": [
             "2026-07-25",
             "2026-08-03",
-            "2026-08-19"
+            "2026-08-19",
+            "2026-08-28"
           ],
           "valores": [
             216.0,
             253.3,
+            253.3,
             253.3
           ],
-          "num_sesiones": 3
+          "num_sesiones": 4
         }
       }
     },
@@ -5981,13 +6175,15 @@
         "Peso promedio ponderado (lbs)": {
           "fechas": [
             "2026-07-25",
-            "2026-08-19"
+            "2026-08-19",
+            "2026-08-28"
           ],
           "valores": [
             25.0,
-            45.0
+            45.0,
+            50.0
           ],
-          "num_sesiones": 2
+          "num_sesiones": 3
         },
         "Peso máximo cómodo — series de 8+ reps (lbs)": {
           "fechas": [
@@ -6001,24 +6197,28 @@
         "Peso máximo cómodo — series de 5+ reps (lbs)": {
           "fechas": [
             "2026-07-25",
-            "2026-08-19"
+            "2026-08-19",
+            "2026-08-28"
           ],
           "valores": [
             30.0,
-            50.0
+            50.0,
+            60.0
           ],
-          "num_sesiones": 2
+          "num_sesiones": 3
         },
         "1RM estimado, fórmula de Epley (lbs)": {
           "fechas": [
             "2026-07-25",
-            "2026-08-19"
+            "2026-08-19",
+            "2026-08-28"
           ],
           "valores": [
             38.0,
-            60.0
+            60.0,
+            72.0
           ],
-          "num_sesiones": 2
+          "num_sesiones": 3
         }
       }
     },
@@ -6313,46 +6513,54 @@
         "Peso promedio ponderado (lbs)": {
           "fechas": [
             "2026-08-03",
-            "2026-08-19"
+            "2026-08-19",
+            "2026-08-28"
           ],
           "valores": [
             90.0,
+            120.0,
             120.0
           ],
-          "num_sesiones": 2
+          "num_sesiones": 3
         },
         "Peso máximo cómodo — series de 8+ reps (lbs)": {
           "fechas": [
             "2026-08-03",
-            "2026-08-19"
+            "2026-08-19",
+            "2026-08-28"
           ],
           "valores": [
             110.0,
-            140.0
+            140.0,
+            120.0
           ],
-          "num_sesiones": 2
+          "num_sesiones": 3
         },
         "Peso máximo cómodo — series de 5+ reps (lbs)": {
           "fechas": [
             "2026-08-03",
-            "2026-08-19"
+            "2026-08-19",
+            "2026-08-28"
           ],
           "valores": [
             110.0,
-            140.0
+            140.0,
+            120.0
           ],
-          "num_sesiones": 2
+          "num_sesiones": 3
         },
         "1RM estimado, fórmula de Epley (lbs)": {
           "fechas": [
             "2026-08-03",
-            "2026-08-19"
+            "2026-08-19",
+            "2026-08-28"
           ],
           "valores": [
             139.3,
-            177.3
+            177.3,
+            152.0
           ],
-          "num_sesiones": 2
+          "num_sesiones": 3
         }
       }
     },
