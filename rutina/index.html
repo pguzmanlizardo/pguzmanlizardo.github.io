@@ -165,36 +165,37 @@
       </tbody>
       </table>
       <blockquote>
-      <p><strong>Progreso (sesión 21 ago) — pesos para la próxima
+      <p><strong>Progreso (sesión 1 sep) — pesos para la próxima
       sesión</strong>, según la regla "si llegas a 8 reps, sube
       peso":</p>
       <ul>
-      <li><strong>Bench press</strong>: sesión sin ningún fallo — 140
-      lbs x 5 dos veces (RIR 2), y 150 lbs sostenido en
-      <strong>tres</strong> series seguidas (4, 3, 3 reps, todas RIR 1).
-      El 15 ago, 150 lbs solo aguantó una serie antes de fallar (RIR 0);
-      hoy lo sostuviste tres veces sin fallar ni una. Ninguna serie
-      llegó a 6-8 reps, así que el peso se mantiene → la próxima vez,
-      busca acumular más reps a 150 lbs (ej. 5, 4, 4) antes de subir
-      más.</li>
-      <li><strong>Weighted pull up</strong>: cuatro series consistentes
-      sin asistencia a 5 reps (RIR 2, 1, 1, 1) — igual que el 15 ago, no
-      hubo caída ni asistencia hasta el final. La diferencia es que hoy
-      metiste una quinta serie extra que sí llegó al fallo (4 reps, RIR
-      0) en vez de una serie asistida de rescate. Las reps no subieron
-      todavía respecto al 15 ago (siguen en 5, no en 6) → sigue el mismo
-      objetivo: subir esas cuatro series de forma consistente (ej. 5, 5,
-      6, 6) antes de pensar en lastre, y si vas a agregar una serie
-      extra al final, para en RIR 1 en vez de ir al fallo.</li>
-      <li><strong>Overhead press</strong>: cumpliste justo lo que pedía
-      la nota pasada — dos series consistentes a 120 lbs x 6 con RIR 1,
-      <strong>sin ningún fallo</strong> (el 15 ago, la segunda serie a
-      120 sí había fallado). Como ya se sostuvo dos veces sin fallar,
-      sube a ~125-130 lbs la próxima vez.</li>
-      <li><strong>Seated row (remo)</strong>: seguiste subiendo más allá
-      de lo sugerido — 190, 200 y <strong>210 lbs</strong>, las tres en
-      RIR 1 sin fallar. Otra vez el ejercicio con el manejo más limpio
-      de la sesión → sube a ~215-220 lbs la próxima vez.</li>
+      <li><strong>Bench press</strong>: cambiaste la estructura respecto
+      al 21 ago — en vez de 2 series a 140 y 3 a 150, hiciste <strong>4
+      series a 140 lbs x 5</strong> (RIR 2, 2, 1, 1) y una sola a 150
+      lbs x 4 (RIR 1), sin ningún fallo en toda la sesión. Ya
+      demostraste que 150 lbs aguanta tanto una serie única (hoy) como
+      tres seguidas (21 ago) sin fallar — el siguiente paso es combinar
+      ambas cosas: buscar más reps en ambos pesos (ej. 140 x 6-7, 150 x
+      5-6) antes de subir más.</li>
+      <li><strong>Weighted pull up</strong>: la mejor sesión registrada
+      en este ejercicio — <strong>cinco series consistentes a 5 reps,
+      todas en RIR 1</strong>, sin ninguna caída ni fallo (el 21 ago la
+      quinta serie extra sí había fallado). Es la primera vez que
+      sostienes el mismo nivel de esfuerzo en las cinco series seguidas.
+      Las reps siguen en 5 (no en 6 todavía) → sigue buscando subir a 5,
+      5, 6, 6, 5 de forma consistente antes de pensar en lastre.</li>
+      <li><strong>Overhead press</strong>: repetiste 120 lbs x 6 dos
+      veces sin fallar (RIR 2, 1), igual que el 21 ago, pero el salto a
+      130 lbs (en vez de ~125-130 sugerido de forma gradual) terminó en
+      fallo (4 reps, RIR 0) — mismo patrón de salto grande que ha
+      aparecido en otros ejercicios (incline bench, chest fly). La
+      próxima vez, prueba 125 lbs como escalón intermedio antes de
+      volver a intentar 130.</li>
+      <li><strong>Seated row (remo)</strong>: volviste a superar lo
+      sugerido — 200, 210 y <strong>230 lbs</strong>, las tres en RIR 1
+      sin fallar (vs. ~215-220 sugerido el 21 ago). Sigue siendo el
+      ejercicio con el manejo más limpio de la sesión → sube a ~235-240
+      lbs la próxima vez.</li>
       </ul>
       <p><strong>Nota general</strong>: sesión con cero fallos en bench,
       OHP y remo — de 17 series de trabajo, solo 1 terminó en fallo (RIR
@@ -692,6 +693,210 @@
   // registrada en progreso.csv).
   const COLUMNAS = [{"key": "fecha", "label": "Fecha", "tipo": "texto"}, {"key": "dia", "label": "Día", "tipo": "numero"}, {"key": "ejercicio", "label": "Ejercicio", "tipo": "texto"}, {"key": "set_num", "label": "Set", "tipo": "numero"}, {"key": "peso_lbs", "label": "Peso (lbs)", "tipo": "numero"}, {"key": "reps", "label": "Reps", "tipo": "numero"}, {"key": "rir", "label": "RIR", "tipo": "numero"}, {"key": "tipo", "label": "Tipo", "tipo": "texto"}, {"key": "es_top_set", "label": "Top set", "tipo": "texto"}, {"key": "notas", "label": "Notas", "tipo": "texto"}];
   const FILAS_ORIGINALES = [
+  {
+    "fecha": "2026-09-01",
+    "dia": 1,
+    "ejercicio": "Weighted pull up",
+    "set_num": 5,
+    "peso_lbs": null,
+    "reps": 5,
+    "rir": 1.0,
+    "tipo": "trabajo",
+    "es_top_set": "✓",
+    "notas": "Descanso 2 min; peso corporal"
+  },
+  {
+    "fecha": "2026-09-01",
+    "dia": 1,
+    "ejercicio": "Weighted pull up",
+    "set_num": 4,
+    "peso_lbs": null,
+    "reps": 5,
+    "rir": 1.0,
+    "tipo": "trabajo",
+    "es_top_set": "",
+    "notas": "Descanso 2 min; peso corporal"
+  },
+  {
+    "fecha": "2026-09-01",
+    "dia": 1,
+    "ejercicio": "Weighted pull up",
+    "set_num": 3,
+    "peso_lbs": null,
+    "reps": 5,
+    "rir": 1.0,
+    "tipo": "trabajo",
+    "es_top_set": "",
+    "notas": "Descanso 2 min; peso corporal"
+  },
+  {
+    "fecha": "2026-09-01",
+    "dia": 1,
+    "ejercicio": "Weighted pull up",
+    "set_num": 2,
+    "peso_lbs": null,
+    "reps": 5,
+    "rir": 1.0,
+    "tipo": "trabajo",
+    "es_top_set": "",
+    "notas": "Descanso 2 min; peso corporal"
+  },
+  {
+    "fecha": "2026-09-01",
+    "dia": 1,
+    "ejercicio": "Weighted pull up",
+    "set_num": 1,
+    "peso_lbs": null,
+    "reps": 5,
+    "rir": 1.0,
+    "tipo": "trabajo",
+    "es_top_set": "",
+    "notas": "Descanso 2 min; peso corporal"
+  },
+  {
+    "fecha": "2026-09-01",
+    "dia": 1,
+    "ejercicio": "Seated row",
+    "set_num": 3,
+    "peso_lbs": 230.0,
+    "reps": 6,
+    "rir": 1.0,
+    "tipo": "trabajo",
+    "es_top_set": "✓",
+    "notas": "Descanso 2 min"
+  },
+  {
+    "fecha": "2026-09-01",
+    "dia": 1,
+    "ejercicio": "Seated row",
+    "set_num": 2,
+    "peso_lbs": 210.0,
+    "reps": 6,
+    "rir": 1.0,
+    "tipo": "trabajo",
+    "es_top_set": "",
+    "notas": "Descanso 2 min"
+  },
+  {
+    "fecha": "2026-09-01",
+    "dia": 1,
+    "ejercicio": "Seated row",
+    "set_num": 1,
+    "peso_lbs": 200.0,
+    "reps": 6,
+    "rir": 1.0,
+    "tipo": "trabajo",
+    "es_top_set": "",
+    "notas": "Descanso 2 min"
+  },
+  {
+    "fecha": "2026-09-01",
+    "dia": 1,
+    "ejercicio": "Overhead press",
+    "set_num": 3,
+    "peso_lbs": 130.0,
+    "reps": 4,
+    "rir": 0.0,
+    "tipo": "trabajo",
+    "es_top_set": "✓",
+    "notas": "Descanso 2 min; Fallo"
+  },
+  {
+    "fecha": "2026-09-01",
+    "dia": 1,
+    "ejercicio": "Overhead press",
+    "set_num": 2,
+    "peso_lbs": 120.0,
+    "reps": 6,
+    "rir": 1.0,
+    "tipo": "trabajo",
+    "es_top_set": "",
+    "notas": "Descanso 2 min"
+  },
+  {
+    "fecha": "2026-09-01",
+    "dia": 1,
+    "ejercicio": "Overhead press",
+    "set_num": 1,
+    "peso_lbs": 120.0,
+    "reps": 6,
+    "rir": 2.0,
+    "tipo": "trabajo",
+    "es_top_set": "",
+    "notas": "Descanso 2 min"
+  },
+  {
+    "fecha": "2026-09-01",
+    "dia": 1,
+    "ejercicio": "Bench press",
+    "set_num": 6,
+    "peso_lbs": 150.0,
+    "reps": 4,
+    "rir": 1.0,
+    "tipo": "trabajo",
+    "es_top_set": "✓",
+    "notas": "Descanso 3 min"
+  },
+  {
+    "fecha": "2026-09-01",
+    "dia": 1,
+    "ejercicio": "Bench press",
+    "set_num": 5,
+    "peso_lbs": 140.0,
+    "reps": 5,
+    "rir": 1.0,
+    "tipo": "trabajo",
+    "es_top_set": "",
+    "notas": "Descanso 3 min"
+  },
+  {
+    "fecha": "2026-09-01",
+    "dia": 1,
+    "ejercicio": "Bench press",
+    "set_num": 4,
+    "peso_lbs": 140.0,
+    "reps": 5,
+    "rir": 1.0,
+    "tipo": "trabajo",
+    "es_top_set": "",
+    "notas": "Descanso 2 min 30 seg"
+  },
+  {
+    "fecha": "2026-09-01",
+    "dia": 1,
+    "ejercicio": "Bench press",
+    "set_num": 3,
+    "peso_lbs": 140.0,
+    "reps": 5,
+    "rir": 2.0,
+    "tipo": "trabajo",
+    "es_top_set": "",
+    "notas": "Descanso 2 min 30 seg"
+  },
+  {
+    "fecha": "2026-09-01",
+    "dia": 1,
+    "ejercicio": "Bench press",
+    "set_num": 2,
+    "peso_lbs": 140.0,
+    "reps": 5,
+    "rir": 2.0,
+    "tipo": "trabajo",
+    "es_top_set": "",
+    "notas": "Descanso 2 min 30 seg"
+  },
+  {
+    "fecha": "2026-09-01",
+    "dia": 1,
+    "ejercicio": "Bench press",
+    "set_num": 1,
+    "peso_lbs": 50.0,
+    "reps": 6,
+    "rir": null,
+    "tipo": "calentamiento",
+    "es_top_set": "",
+    "notas": "Descanso 1 min"
+  },
   {
     "fecha": "2026-08-28",
     "dia": 4,
@@ -5324,16 +5529,18 @@
             "2026-07-29",
             "2026-08-06",
             "2026-08-15",
-            "2026-08-21"
+            "2026-08-21",
+            "2026-09-01"
           ],
           "valores": [
             120.4,
             126.1,
             135.6,
             135.2,
-            145.0
+            145.0,
+            141.7
           ],
-          "num_sesiones": 5
+          "num_sesiones": 6
         },
         "Peso máximo cómodo — series de 8+ reps (lbs)": {
           "fechas": [
@@ -5354,16 +5561,18 @@
             "2026-07-29",
             "2026-08-06",
             "2026-08-15",
-            "2026-08-21"
+            "2026-08-21",
+            "2026-09-01"
           ],
           "valores": [
             140.0,
             130.0,
             140.0,
             140.0,
+            140.0,
             140.0
           ],
-          "num_sesiones": 5
+          "num_sesiones": 6
         },
         "1RM estimado, fórmula de Epley (lbs)": {
           "fechas": [
@@ -5371,16 +5580,18 @@
             "2026-07-29",
             "2026-08-06",
             "2026-08-15",
-            "2026-08-21"
+            "2026-08-21",
+            "2026-09-01"
           ],
           "valores": [
             163.3,
             164.7,
             172.7,
             170.0,
+            170.0,
             170.0
           ],
-          "num_sesiones": 5
+          "num_sesiones": 6
         }
       }
     },
@@ -5420,16 +5631,18 @@
             "2026-07-29",
             "2026-08-06",
             "2026-08-15",
-            "2026-08-21"
+            "2026-08-21",
+            "2026-09-01"
           ],
           "valores": [
             92.9,
             99.1,
             108.8,
             116.2,
-            116.7
+            116.7,
+            122.5
           ],
-          "num_sesiones": 5
+          "num_sesiones": 6
         },
         "Peso máximo cómodo — series de 8+ reps (lbs)": {
           "fechas": [
@@ -5450,16 +5663,18 @@
             "2026-07-29",
             "2026-08-06",
             "2026-08-15",
-            "2026-08-21"
+            "2026-08-21",
+            "2026-09-01"
           ],
           "valores": [
             100.0,
             110.0,
             110.0,
             120.0,
+            120.0,
             120.0
           ],
-          "num_sesiones": 5
+          "num_sesiones": 6
         },
         "1RM estimado, fórmula de Epley (lbs)": {
           "fechas": [
@@ -5467,16 +5682,18 @@
             "2026-07-29",
             "2026-08-06",
             "2026-08-15",
-            "2026-08-21"
+            "2026-08-21",
+            "2026-09-01"
           ],
           "valores": [
             124.7,
             132.0,
             139.3,
             144.0,
-            144.0
+            144.0,
+            147.3
           ],
-          "num_sesiones": 5
+          "num_sesiones": 6
         }
       }
     },
@@ -5490,16 +5707,18 @@
             "2026-07-29",
             "2026-08-06",
             "2026-08-15",
-            "2026-08-21"
+            "2026-08-21",
+            "2026-09-01"
           ],
           "valores": [
             136.7,
             170.0,
             186.5,
             193.3,
-            200.0
+            200.0,
+            213.3
           ],
-          "num_sesiones": 5
+          "num_sesiones": 6
         },
         "Peso máximo cómodo — series de 8+ reps (lbs)": {
           "fechas": [
@@ -5520,16 +5739,18 @@
             "2026-07-29",
             "2026-08-06",
             "2026-08-15",
-            "2026-08-21"
+            "2026-08-21",
+            "2026-09-01"
           ],
           "valores": [
             170.0,
             190.0,
             190.0,
             200.0,
-            210.0
+            210.0,
+            230.0
           ],
-          "num_sesiones": 5
+          "num_sesiones": 6
         },
         "1RM estimado, fórmula de Epley (lbs)": {
           "fechas": [
@@ -5537,16 +5758,18 @@
             "2026-07-29",
             "2026-08-06",
             "2026-08-15",
-            "2026-08-21"
+            "2026-08-21",
+            "2026-09-01"
           ],
           "valores": [
             215.3,
             240.7,
             240.7,
             240.0,
-            252.0
+            252.0,
+            276.0
           ],
-          "num_sesiones": 5
+          "num_sesiones": 6
         }
       }
     },
